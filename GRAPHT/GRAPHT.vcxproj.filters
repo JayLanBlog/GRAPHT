@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="thridpart">
+      <UniqueIdentifier>{df3fdb7d-c651-4b91-a14a-3718ccbffca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thridpart\gui">
+      <UniqueIdentifier>{8e8b0e71-19e6-4f8a-9e01-648680aa8c94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thridpart\gui\imgui">
+      <UniqueIdentifier>{665ac557-545f-4d35-9633-eca71b93b39f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{b9fdaece-cc2c-4712-b792-fc06453a605a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{14f2a2af-84ee-4a71-a701-38aa139ffee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui">
+      <UniqueIdentifier>{6debb8e1-b813-4049-b6fb-c37d405a4930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\dx">
+      <UniqueIdentifier>{099de6ab-6258-4d85-9794-aba8f0374c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thridpart\sokol">
+      <UniqueIdentifier>{35f8dcca-8752-460c-8e31-a046d7c7d716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\gl">
+      <UniqueIdentifier>{8258c0eb-1f6f-4417-8861-70b7c42b06cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\vk">
+      <UniqueIdentifier>{ba9d4493-477a-4c87-bf2d-af2de7310b1b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thridpart\gui\imgui\imconfig.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="thridpart\gui\imgui\imgui.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="thridpart\gui\imgui\imgui_internal.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="thridpart\gui\imgui\imstb_rectpack.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="thridpart\gui\imgui\imstb_textedit.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="thridpart\gui\imgui\imstb_truetype.h">
+      <Filter>thridpart\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\dx\imgui_impl_dx9.h">
+      <Filter>src\gui\dx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\dx\imgui_impl_win32.h">
+      <Filter>src\gui\dx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gl3\imgui_impl_opengl3.h">
+      <Filter>src\gui\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gl3\imgui_impl_opengl3_loader.h">
+      <Filter>src\gui\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gl3\imgui_impl_sdl3.h">
+      <Filter>src\gui\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\vk\imgui_impl_sdl3.h">
+      <Filter>src\gui\vk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\vk\imgui_impl_vulkan.h">
+      <Filter>src\gui\vk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EgineMain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\gl3\imgui_impl_opengl3.cpp">
+      <Filter>src\gui\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\gl3\imgui_impl_sdl3.cpp">
+      <Filter>src\gui\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\vk\imgui_impl_sdl3.cpp">
+      <Filter>src\gui\vk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\vk\imgui_impl_vulkan.cpp">
+      <Filter>src\gui\vk</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

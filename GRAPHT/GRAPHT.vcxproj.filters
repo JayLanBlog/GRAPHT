@@ -13,9 +13,6 @@
     <Filter Include="src">
       <UniqueIdentifier>{b9fdaece-cc2c-4712-b792-fc06453a605a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="external">
-      <UniqueIdentifier>{14f2a2af-84ee-4a71-a701-38aa139ffee4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\gui">
       <UniqueIdentifier>{6debb8e1-b813-4049-b6fb-c37d405a4930}</UniqueIdentifier>
     </Filter>
@@ -30,6 +27,21 @@
     </Filter>
     <Filter Include="src\gui\vk">
       <UniqueIdentifier>{ba9d4493-477a-4c87-bf2d-af2de7310b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inlcude">
+      <UniqueIdentifier>{cf979c2f-6120-46a9-a298-70b5ae8e0596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inlcude\common">
+      <UniqueIdentifier>{701d10a2-f62d-46ee-8c53-fbaf391ec871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{14f2a2af-84ee-4a71-a701-38aa139ffee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{b74f470d-761e-4eb1-955e-9980df3f7200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app\win">
+      <UniqueIdentifier>{560b166d-fc2f-45d2-96d7-ccb3d82ba83a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +84,18 @@
     <ClInclude Include="src\gui\vk\imgui_impl_vulkan.h">
       <Filter>src\gui\vk</Filter>
     </ClInclude>
+    <ClInclude Include="src\gui\GUIView.h">
+      <Filter>src\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\common\core.h">
+      <Filter>inlcude\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\app\app.h">
+      <Filter>src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="src\app\win\WinApp.h">
+      <Filter>src\app\win</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EgineMain.cpp">
@@ -88,6 +112,12 @@
     </ClCompile>
     <ClCompile Include="src\gui\vk\imgui_impl_vulkan.cpp">
       <Filter>src\gui\vk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GUIView.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\app\win\WinApp.cpp">
+      <Filter>src\app\win</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

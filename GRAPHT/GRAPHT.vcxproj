@@ -148,11 +148,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\common\core.h" />
+    <ClInclude Include="src\app\app.h" />
+    <ClInclude Include="src\app\win\WinApp.h" />
     <ClInclude Include="src\gui\dx\imgui_impl_dx9.h" />
     <ClInclude Include="src\gui\dx\imgui_impl_win32.h" />
     <ClInclude Include="src\gui\gl3\imgui_impl_opengl3.h" />
     <ClInclude Include="src\gui\gl3\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\gui\gl3\imgui_impl_sdl3.h" />
+    <ClInclude Include="src\gui\GUIView.h" />
     <ClInclude Include="src\gui\vk\imgui_impl_sdl3.h" />
     <ClInclude Include="src\gui\vk\imgui_impl_vulkan.h" />
     <ClInclude Include="thridpart\gui\imgui\imconfig.h" />
@@ -163,9 +167,11 @@
     <ClInclude Include="thridpart\gui\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\app\win\WinApp.cpp" />
     <ClCompile Include="src\EgineMain.cpp" />
     <ClCompile Include="src\gui\gl3\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\gui\gl3\imgui_impl_sdl3.cpp" />
+    <ClCompile Include="src\gui\GUIView.cpp" />
     <ClCompile Include="src\gui\vk\imgui_impl_sdl3.cpp" />
     <ClCompile Include="src\gui\vk\imgui_impl_vulkan.cpp" />
   </ItemGroup>

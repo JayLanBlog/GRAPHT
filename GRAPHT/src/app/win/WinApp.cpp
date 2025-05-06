@@ -9,9 +9,16 @@ namespace GRAPHT {
 			printf("Error: SDL_Init(): %s\n", SDL_GetError());
 			return ;
 		}
+
 		createWindow();
 
 		initializeGPU();
+			
+		//Get GL Funciton Addr After Create Window
+		gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress);
+		//TShader* shader = new TShader("E:/WorkLearn/FrameWork/GRAPHT/GRAPHT/resource/shader/1.model_loading.vs", "E:/WorkLearn/FrameWork/GRAPHT/GRAPHT/resource/shader/1.model_loading.fs");
+
+		actor = new ActorT();
 	}
 	void WinApp::initializeGPU() {
 	
@@ -57,7 +64,9 @@ namespace GRAPHT {
 		gui->resize(fb_width,fb_height);
 
 		gui->startFrame();
-		 ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+		
+	     ImGuiIO& io = ImGui::GetIO(); (void)io;
 	
 		// 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
 		if (show_demo_window)
@@ -96,7 +105,7 @@ namespace GRAPHT {
 			ImGui::End();
 		}
 
-
+	//	actor->Draw();
 		gui->renderFrame(clear_color);
 
 		return false;

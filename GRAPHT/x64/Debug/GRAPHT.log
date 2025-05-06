@@ -1,0 +1,7 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1098,5): warning MSB8027: 名为 imgui_impl_sdl3.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 src\gui\gl3\imgui_impl_sdl3.cpp, src\gui\vk\imgui_impl_sdl3.cpp。
+  WinApp.cpp
+E:\WorkLearn\FrameWork\GRAPHT\GRAPHT\src\gui\GUIView.h(8,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+x64\Debug\imgui_impl_sdl3.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  GRAPHT.vcxproj -> E:\WorkLearn\FrameWork\GRAPHT\x64\Debug\GRAPHT.exe
+  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+  或批处理文件。

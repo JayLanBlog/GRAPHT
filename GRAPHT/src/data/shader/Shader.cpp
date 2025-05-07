@@ -78,22 +78,25 @@ namespace GRAPHT {
         unsigned int vertex, fragment;
         // vertex shader
         vertex = glCreateShader(GL_VERTEX_SHADER);
-        glShaderSource(vertex, 1, &vShaderCode, NULL);
+        const char* vsCode = vShaderCode.c_str();
+        glShaderSource(vertex, 1, &vsCode, NULL);
         glCompileShader(vertex);
         checkCompileErrors(vertex, "VERTEX");
         // fragment Shader
         fragment = glCreateShader(GL_FRAGMENT_SHADER);
-        glShaderSource(fragment, 1, &fShaderCode, NULL);
+        const char * fsCode =fShaderCode.c_str();
+        glShaderSource(fragment, 1, &fsCode, NULL);
         glCompileShader(fragment);
         checkCompileErrors(fragment, "FRAGMENT");
         // if geometry shader is given, compile geometry shader
         unsigned int geometry;
 
-        if (gShaderCode != nullptr)
+        if (!gShaderCode.empty())
         {
             //const char* gShaderCode = geometryCode.c_str();
             geometry = glCreateShader(GL_GEOMETRY_SHADER);
-            glShaderSource(geometry, 1, &gShaderCode, NULL);
+            const char* gCode  = gShaderCode.c_str();
+            glShaderSource(geometry, 1, &gCode, NULL);
             glCompileShader(geometry);
             checkCompileErrors(geometry, "GEOMETRY");
         }
@@ -101,14 +104,14 @@ namespace GRAPHT {
         ID = glCreateProgram();
         glAttachShader(ID, vertex);
         glAttachShader(ID, fragment);
-        if (gShaderCode != nullptr)
+        if (!gShaderCode.empty())
             glAttachShader(ID, geometry);
         glLinkProgram(ID);
         checkCompileErrors(ID, "PROGRAM");
         // delete the shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertex);
         glDeleteShader(fragment);
-        if (gShaderCode != nullptr)
+        if (!gShaderCode.empty())
             glDeleteShader(geometry);
     }
 

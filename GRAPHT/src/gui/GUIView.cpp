@@ -20,6 +20,7 @@ namespace GRAPHT {
 			printf("Error: SDL_CreateWindow(): %s\n", SDL_GetError());
 			
 		}
+
 		return window;
 	}
 
@@ -117,8 +118,13 @@ namespace GRAPHT {
 		glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
 		glClear(GL_COLOR_BUFFER_BIT);
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-		SDL_GL_SwapWindow(window);
+		
 	}
+
+
+	 void GLGUI::swapper() {
+		 SDL_GL_SwapWindow(window);
+	 }
 
 	void GLGUI::resize(int fb_width, int fb_height) {
 
@@ -150,6 +156,10 @@ namespace GRAPHT {
 	VulkanGUI::VulkanGUI() {
 		window = createWIndow();
 		init();
+	}
+
+	void VulkanGUI::swapper() {
+
 	}
 
 	void VulkanGUI::init() {

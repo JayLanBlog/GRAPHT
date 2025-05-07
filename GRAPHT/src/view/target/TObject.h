@@ -6,7 +6,8 @@ namespace GRAPHT{
 	class ActorT {
 	public:
 		GLShader* shader;
-		ModelRender* render;
+		//ModelRender* render;
+		TGLRender* render;
 		glm::mat4 projection;
 		Camera* camera;
 		const unsigned int SCR_WIDTH = 800;
@@ -14,7 +15,7 @@ namespace GRAPHT{
 
 		ActorT() {
 			init();
-			paramInit();
+			//paramInit();
 		}
 		void init();
 

@@ -1,6 +1,6 @@
 #include "MaterialManager.h"
 #include <glad/glad.h> 
-
+#include <Windows.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <stb_image.h>
@@ -18,7 +18,9 @@ namespace GRAPHT {
         }
         // retrieve the directory path of the filepath
         modlePath = path.substr(0, path.find_last_of('/'));
-
+        char buffer[MAX_PATH];
+        GetCurrentDirectoryA(MAX_PATH, buffer);
+        std::cout << "Current working directory: " << buffer << std::endl;
 		return process(scene->mRootNode,scene);
 	}
 
@@ -133,12 +135,13 @@ namespace GRAPHT {
                     break;
                 }
             }
+            string fullPath = this->modlePath+"/" + str.C_Str();
             if (!skip)
             {   // if texture hasn't been loaded already, load it
                 Texture texture;
               //  texture.id = TextureFromFile(str.C_Str(), this->directory);
                 texture.type = typeName;
-                texture.path = str.C_Str();
+                texture.path = fullPath;
                 textures.push_back(texture);
                 textures_loaded.push_back(texture);  // store it as texture loaded for entire model, to ensure we won't unnecessary load duplicate textures.
             }

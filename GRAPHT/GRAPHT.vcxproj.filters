@@ -82,6 +82,9 @@
     <Filter Include="src\moudle\camera">
       <UniqueIdentifier>{db4fdb9e-c8dc-4e04-bc06-e4b7d93d2f31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\moudle\window">
+      <UniqueIdentifier>{9bc389ee-8ea3-4680-8ae3-2b133052712e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thridpart\gui\imgui\imconfig.h">

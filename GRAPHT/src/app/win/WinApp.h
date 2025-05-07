@@ -20,7 +20,7 @@ namespace GRAPHT {
 		ActorT* actor;
 		bool show_demo_window = true;
 		bool show_another_window = false;
-		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+		ImVec4 clear_color = ImVec4(1.0f, 1.0f, 1.0f, 0.00f);
 
 	};
 };

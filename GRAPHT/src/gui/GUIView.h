@@ -34,6 +34,8 @@ namespace GRAPHT {
 
 		virtual void renderFrame(ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f)) = 0;
 
+		virtual void swapper()=0;
+
 		virtual void resize(int fb_width, int fb_height) = 0;
 
 		virtual  SDL_Window*  createWIndow() = 0;
@@ -61,6 +63,9 @@ namespace GRAPHT {
 
 		virtual  SDL_Window*  createWIndow();
 
+
+		virtual void swapper() ;
+
 	private:
 		SDL_GLContext gl_context;
 
@@ -70,6 +75,9 @@ namespace GRAPHT {
 	public:
 		VulkanGUI(SDL_Window* w);
 		VulkanGUI();
+		
+		virtual void swapper();
+
 		virtual  SDL_Window*  createWIndow();
 
 		virtual void init();

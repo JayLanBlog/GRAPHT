@@ -19,6 +19,7 @@ namespace GRAPHT {
 		//TShader* shader = new TShader("E:/WorkLearn/FrameWork/GRAPHT/GRAPHT/resource/shader/1.model_loading.vs", "E:/WorkLearn/FrameWork/GRAPHT/GRAPHT/resource/shader/1.model_loading.fs");
 
 		actor = new ActorT();
+	//	gui->actor = new ActorT();
 	}
 	void WinApp::initializeGPU() {
 	
@@ -60,6 +61,8 @@ namespace GRAPHT {
 		// Resize swap chain?
 		int fb_width, fb_height;
 		SDL_GetWindowSize(window, &fb_width, &fb_height);
+
+		//actor->Draw();
 
 		gui->resize(fb_width,fb_height);
 
@@ -105,8 +108,12 @@ namespace GRAPHT {
 			ImGui::End();
 		}
 
-	//	actor->Draw();
+		
 		gui->renderFrame(clear_color);
+		
+		actor->Draw();
+
+		gui->swapper();
 
 		return false;
 

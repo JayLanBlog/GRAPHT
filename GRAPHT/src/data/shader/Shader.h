@@ -10,9 +10,9 @@ namespace GRAPHT {
 	class Shader {
 	public:
 		unsigned int ID;
-		const char* vShaderCode;
-		const char* fShaderCode;
-		const char* gShaderCode;
+		std::string vShaderCode;
+		std::string fShaderCode;
+		std::string  gShaderCode;
 
 		Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -89,14 +89,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%VULKAN_SDK%\include;../GRAPHT/thridpart/gui/imgui;../GRAPHT/thridpart/gui;../GRAPHT/thridpart/sokol/;../GRAPHT/thridpart/;../GRAPHT/include;../GRAPHT/src/gui/dx;../GRAPHT/src/gui/gl3;../GRAPHT/src/gui/vk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%VULKAN_SDK%\include;../GRAPHT/thridpart/gui/imgui;../GRAPHT/thridpart/gui;../GRAPHT/thridpart/sokol/;../GRAPHT/thridpart/;../GRAPHT/include;../GRAPHT/src/gui/dx;../GRAPHT/src/gui/gl3;../GRAPHT/src/gui/vk;../GRAPHT/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\GRAPHT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>win32_directx9.lib;d3d9.lib;SDL3.lib;opengl32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>win32_directx9.lib;d3d9.lib;SDL3.lib;opengl32.lib;vulkan-1.lib;assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,14 +121,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%VULKAN_SDK%\include;../GRAPHT/thridpart/gui/imgui;../GRAPHT/thridpart/gui;../GRAPHT/thridpart/sokol/;../GRAPHT/thridpart/;../GRAPHT/include;../GRAPHT/src/gui/dx;../GRAPHT/src/gui/gl3;../GRAPHT/src/gui/vk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%VULKAN_SDK%\include;../GRAPHT/thridpart/gui/imgui;../GRAPHT/thridpart/gui;../GRAPHT/thridpart/sokol/;../GRAPHT/thridpart/;../GRAPHT/include;../GRAPHT/src/gui/dx;../GRAPHT/src/gui/gl3;../GRAPHT/src/gui/vk;../GRAPHT/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\GRAPHT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>win32_directx9.lib;d3d9.lib;SDL3.lib;opengl32.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>win32_directx9.lib;d3d9.lib;SDL3.lib;opengl32.lib;vulkan-1.lib;assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,8 +149,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\common\core.h" />
+    <ClInclude Include="include\glad\glad.h" />
+    <ClInclude Include="include\stb_image.h" />
     <ClInclude Include="src\app\app.h" />
     <ClInclude Include="src\app\win\WinApp.h" />
+    <ClInclude Include="src\data\model\Mesh.h" />
+    <ClInclude Include="src\data\model\Model.h" />
+    <ClInclude Include="src\data\shader\Shader.h" />
+    <ClInclude Include="src\data\texture\Texture.h" />
     <ClInclude Include="src\gui\dx\imgui_impl_dx9.h" />
     <ClInclude Include="src\gui\dx\imgui_impl_win32.h" />
     <ClInclude Include="src\gui\gl3\imgui_impl_opengl3.h" />
@@ -159,6 +165,12 @@
     <ClInclude Include="src\gui\GUIView.h" />
     <ClInclude Include="src\gui\vk\imgui_impl_sdl3.h" />
     <ClInclude Include="src\gui\vk\imgui_impl_vulkan.h" />
+    <ClInclude Include="src\module\camera\camera.h" />
+    <ClInclude Include="src\module\device\gpu_device.h" />
+    <ClInclude Include="src\module\loader\MaterialManager.h" />
+    <ClInclude Include="src\module\window\window.h" />
+    <ClInclude Include="src\view\render\Render.h" />
+    <ClInclude Include="src\view\target\TObject.h" />
     <ClInclude Include="thridpart\gui\imgui\imconfig.h" />
     <ClInclude Include="thridpart\gui\imgui\imgui.h" />
     <ClInclude Include="thridpart\gui\imgui\imgui_internal.h" />
@@ -167,13 +179,23 @@
     <ClInclude Include="thridpart\gui\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\glad\glad.c" />
+    <ClCompile Include="include\stb_image.cpp" />
     <ClCompile Include="src\app\win\WinApp.cpp" />
+    <ClCompile Include="src\data\shader\Shader.cpp" />
+    <ClCompile Include="src\data\texture\Texture.cpp" />
     <ClCompile Include="src\EgineMain.cpp" />
     <ClCompile Include="src\gui\gl3\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\gui\gl3\imgui_impl_sdl3.cpp" />
     <ClCompile Include="src\gui\GUIView.cpp" />
     <ClCompile Include="src\gui\vk\imgui_impl_sdl3.cpp" />
     <ClCompile Include="src\gui\vk\imgui_impl_vulkan.cpp" />
+    <ClCompile Include="src\module\camera\camera.cpp" />
+    <ClCompile Include="src\module\device\gpu_device.cpp" />
+    <ClCompile Include="src\module\loader\MaterialManager.cpp" />
+    <ClCompile Include="src\module\window\window.cpp" />
+    <ClCompile Include="src\view\render\Render.cpp" />
+    <ClCompile Include="src\view\target\TObject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

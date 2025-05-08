@@ -43,6 +43,51 @@
     <Filter Include="src\app\win">
       <UniqueIdentifier>{560b166d-fc2f-45d2-96d7-ccb3d82ba83a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\moudle">
+      <UniqueIdentifier>{85639d01-b844-4aaa-98c3-071c741bf5a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\moudle\loader">
+      <UniqueIdentifier>{9b61e5b6-34de-4d69-8659-e34e4fdd91df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\moudle\seralize">
+      <UniqueIdentifier>{241fb2a3-fc19-47e9-ae16-6f9e2b557086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data">
+      <UniqueIdentifier>{a5a896b0-6ccf-49ad-8a25-3e7daa43c187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data\texture">
+      <UniqueIdentifier>{b26c1bb1-93fd-4499-b997-4b267e57b17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data\model">
+      <UniqueIdentifier>{7763084f-bd8d-4094-a974-81084139c74e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data\shader">
+      <UniqueIdentifier>{aa35c556-3b12-454f-b063-6e3e90846d2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inlcude\gald">
+      <UniqueIdentifier>{faa9234b-38f7-4392-97bd-88ebb0c5bb9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\view">
+      <UniqueIdentifier>{c52987a3-863f-40ee-9ab4-3025811b3ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\view\render">
+      <UniqueIdentifier>{f0dcdeea-cc63-48d9-b3ff-23cbb51ad2a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\view\target">
+      <UniqueIdentifier>{da1f2755-b6eb-4773-8e59-76b237ef5ed5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\view\gpu">
+      <UniqueIdentifier>{9f399114-dd3f-43f1-bfb7-79b7d589ad69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\moudle\camera">
+      <UniqueIdentifier>{db4fdb9e-c8dc-4e04-bc06-e4b7d93d2f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\moudle\window">
+      <UniqueIdentifier>{9bc389ee-8ea3-4680-8ae3-2b133052712e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\moudle\device">
+      <UniqueIdentifier>{bad69a19-7f6c-40e1-9da2-4f61cc25d471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thridpart\gui\imgui\imconfig.h">
@@ -96,6 +141,42 @@
     <ClInclude Include="src\app\win\WinApp.h">
       <Filter>src\app\win</Filter>
     </ClInclude>
+    <ClInclude Include="src\module\loader\MaterialManager.h">
+      <Filter>src\moudle\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\model\Mesh.h">
+      <Filter>src\data\model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\model\Model.h">
+      <Filter>src\data\model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\texture\Texture.h">
+      <Filter>src\data\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glad\glad.h">
+      <Filter>inlcude\gald</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\shader\Shader.h">
+      <Filter>src\data\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\render\Render.h">
+      <Filter>src\view\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\target\TObject.h">
+      <Filter>src\view\target</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\camera\camera.h">
+      <Filter>src\moudle\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\window\window.h">
+      <Filter>src\moudle\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\device\gpu_device.h">
+      <Filter>src\moudle\device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EgineMain.cpp">
@@ -118,6 +199,36 @@
     </ClCompile>
     <ClCompile Include="src\app\win\WinApp.cpp">
       <Filter>src\app\win</Filter>
+    </ClCompile>
+    <ClCompile Include="include\stb_image.cpp">
+      <Filter>inlcude</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\texture\Texture.cpp">
+      <Filter>src\data\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="include\glad\glad.c">
+      <Filter>inlcude\gald</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\loader\MaterialManager.cpp">
+      <Filter>src\moudle\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\shader\Shader.cpp">
+      <Filter>src\data\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\render\Render.cpp">
+      <Filter>src\view\render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\target\TObject.cpp">
+      <Filter>src\view\target</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\camera\camera.cpp">
+      <Filter>src\moudle\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\window\window.cpp">
+      <Filter>src\moudle\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\device\gpu_device.cpp">
+      <Filter>src\moudle\device</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

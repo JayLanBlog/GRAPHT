@@ -85,6 +85,9 @@
     <Filter Include="src\moudle\window">
       <UniqueIdentifier>{9bc389ee-8ea3-4680-8ae3-2b133052712e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\moudle\device">
+      <UniqueIdentifier>{bad69a19-7f6c-40e1-9da2-4f61cc25d471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thridpart\gui\imgui\imconfig.h">
@@ -168,6 +171,12 @@
     <ClInclude Include="src\module\camera\camera.h">
       <Filter>src\moudle\camera</Filter>
     </ClInclude>
+    <ClInclude Include="src\module\window\window.h">
+      <Filter>src\moudle\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\device\gpu_device.h">
+      <Filter>src\moudle\device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EgineMain.cpp">
@@ -214,6 +223,12 @@
     </ClCompile>
     <ClCompile Include="src\module\camera\camera.cpp">
       <Filter>src\moudle\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\window\window.cpp">
+      <Filter>src\moudle\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\module\device\gpu_device.cpp">
+      <Filter>src\moudle\device</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -166,7 +166,9 @@
     <ClInclude Include="src\gui\vk\imgui_impl_sdl3.h" />
     <ClInclude Include="src\gui\vk\imgui_impl_vulkan.h" />
     <ClInclude Include="src\module\camera\camera.h" />
+    <ClInclude Include="src\module\device\gpu_device.h" />
     <ClInclude Include="src\module\loader\MaterialManager.h" />
+    <ClInclude Include="src\module\window\window.h" />
     <ClInclude Include="src\view\render\Render.h" />
     <ClInclude Include="src\view\target\TObject.h" />
     <ClInclude Include="thridpart\gui\imgui\imconfig.h" />
@@ -189,7 +191,9 @@
     <ClCompile Include="src\gui\vk\imgui_impl_sdl3.cpp" />
     <ClCompile Include="src\gui\vk\imgui_impl_vulkan.cpp" />
     <ClCompile Include="src\module\camera\camera.cpp" />
+    <ClCompile Include="src\module\device\gpu_device.cpp" />
     <ClCompile Include="src\module\loader\MaterialManager.cpp" />
+    <ClCompile Include="src\module\window\window.cpp" />
     <ClCompile Include="src\view\render\Render.cpp" />
     <ClCompile Include="src\view\target\TObject.cpp" />
   </ItemGroup>

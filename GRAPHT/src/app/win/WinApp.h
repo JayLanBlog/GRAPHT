@@ -1,5 +1,7 @@
 #pragma once
 #include "../app.h"
+#include "module/window/window.h"
+#include "module/device/gpu_device.h"
 #include "view/target/TObject.h"
 namespace GRAPHT {
 	class WinApp : public Application
@@ -8,19 +10,13 @@ namespace GRAPHT {
 		WinApp();
 		~WinApp();
 		WinApp(GUIAPI api);
-		void createWindow();
-		void initializeGPU();
+		void ceateDevice();
+		void initDevice();
 		virtual void init() ;
 		virtual bool run();
 		virtual void dstory();
 	private:
-		SDL_Window* window;
-		GUIView* gui;
-
+		Device* gpu;
 		ActorT* actor;
-		bool show_demo_window = true;
-		bool show_another_window = false;
-		ImVec4 clear_color = ImVec4(1.0f, 1.0f, 1.0f, 0.00f);
-
 	};
 };

@@ -6,8 +6,7 @@ int main(int, char**)
 {
     GRAPHT::MaterailManager * manan = GRAPHT::MaterailManager::getManager();
 
-
-    GRAPHT::WinApp* app = new GRAPHT::WinApp(GRAPHT::OPENGL);
+    GRAPHT::WinApp* app = new GRAPHT::WinApp(OPENGL);
     
     // Main loop
     app->launch();

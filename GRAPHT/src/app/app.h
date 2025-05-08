@@ -3,17 +3,13 @@
 #include "../GUIView.h"
 
 namespace GRAPHT {
-	enum GUIAPI
-	{
-		OPENGL = 0,
-		VULKAN = 1
-	};
+
 
 	class Application
 	{
 	public:
 		Application() {
-			gpuAPI = GUIAPI::OPENGL;
+			gpuAPI = OPENGL;
 		}
 		Application(GUIAPI api):gpuAPI(api) {
 
